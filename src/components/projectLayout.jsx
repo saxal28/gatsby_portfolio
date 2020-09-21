@@ -3,23 +3,8 @@ import { Button } from './Button'
 import { PageTitle } from './PageTitle'
 import { Tag } from './Tag'
 
-export const LANGUAGES = {
-    JAVASCRIPT: "Javascript",
-    TYPESCRIPT: "Javascript",
-    SCSS: "SCSS",
-    HTML: "HTML",
-    GATSBYJS: "Gatsby.js",
-    NODEJS: "Node.js",
-    NESTJS: "Nest.js",
-    DOCKER: "Docker",
-    REACT: "React",
-    REDUX: "Redux",
-    REDUX_THUNK: "Redux Thunk",
-    MYSQL: "MySQL"
-}
-
-export const ProjectLayout = ({ title, subtitle, websiteUrl, technologies = [], children }) => {
-    const getTags = (tags) => tags.map(tag => <Tag key={tag} label={tag} />)
+export const ProjectLayout = ({ title, subtitle, website, technologies = [], children, image, color }) => {
+    const getTags = (tags) => tags.map(tag => <Tag key={tag} label={tag} color={color} />)
 
     return (
         <PageTitle
@@ -29,7 +14,7 @@ export const ProjectLayout = ({ title, subtitle, websiteUrl, technologies = [], 
         >
             <div className="page__content">
 
-                <div className="page__content-image"></div>
+                <div className="page__content-image" style={{background: `url(${image})`}}></div>
 
                 <div className="page__content-container">
                     <div className="page__content-title">Technologies Used</div>
@@ -42,7 +27,7 @@ export const ProjectLayout = ({ title, subtitle, websiteUrl, technologies = [], 
                     <div className="page__content-body">
                         {children}
                         <br /><br /><br />
-                        <a href={websiteUrl} className="button" target="_blank">View Website</a>
+                        <a href={website} className="button" target="_blank">View Website</a>
                     </div>
                 </div>
 

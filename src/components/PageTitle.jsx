@@ -1,3 +1,4 @@
+import React from "react"
 import { Grid, GridItem } from '../components/Grid'
 import { Navbar } from "../components/Navbar"
 import { ProjectSlider } from '../components/ProjectSlider'
