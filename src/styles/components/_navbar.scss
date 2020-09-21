@@ -1,0 +1,92 @@
+.navbar {
+    display: flex;
+
+    padding: 20px 60px;
+
+    z-index: 100;
+
+    @include fade-in-animation(500ms);
+
+    &__brand {
+        margin-right: 10px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: white;
+
+        display: flex;
+        align-items: center;
+
+        flex: 1;
+
+        span {
+            font-family: $alt-font;
+        }
+
+        svg {
+            height: 30px;
+            width: 30px;
+            margin-right: 8px;
+
+            g {
+                fill: white;
+            }
+        }
+    }
+
+    &__links-container {
+        flex: 1;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .email-icon {
+            line-height: 1;
+            svg {
+                fill: white;
+                height: 30px;
+                width: 30px;
+            }
+          
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-family: $alt-font;
+        color: white;
+
+        transition: border-color 200ms;
+
+        padding-bottom: 6px;
+        margin-bottom: -9px;
+        border-bottom: 3px solid transparent;
+        display: inline-block;
+
+        text-decoration: none !important;
+
+        &:hover {
+            border-color: white;
+        }
+
+        &.active {
+            border-color: orange;
+        }
+
+        margin-right: 30px;
+    }
+
+    @media (max-width: $phone-breakpoint) {
+        padding: 20px;
+
+        &__link {
+            &:not(:last-of-type) {
+                margin-right: 15px;
+            }
+        }
+    }
+}

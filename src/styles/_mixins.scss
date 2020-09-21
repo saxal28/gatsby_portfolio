@@ -1,0 +1,30 @@
+
+@mixin page-theme($image, $color) {
+    .page {
+        background-image: url($image);
+
+        .tag {
+            box-shadow: 0 4px 8px $color !important;
+            background: $color !important; 
+        }
+
+        .button {
+            box-shadow: 0 4px 8px $color !important;
+            background: $color !important; 
+        }
+
+        &:before {
+            background-image: url($image);
+            background-position: center;
+            background-size: cover;
+            @include blur-animation(2s);
+        }
+
+        &__content {
+            &-image {
+                background-image: url($image);
+                margin-top: -30px; margin-bottom: -30px; margin-left: -30px;
+            }
+        }
+    }
+}

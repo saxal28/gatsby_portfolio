@@ -1,0 +1,47 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes linebreak-open {
+    from {
+        width: 0px;
+    } to {
+        width: 25px;
+    }
+}
+
+@keyframes blur {
+    from {
+        filter: blur(0px);
+    } to {
+        filter: blur(13px);
+    }
+}
+
+@mixin blur-animation($delay) {
+    animation-name: blur;
+    animation-duration: 400ms;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+}
+
+@mixin fade-in-animation($delay) {
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 1000ms;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+}
+
+@mixin linebreak-slide-in($delay) {
+    width: 0;
+    animation-name: linebreak-open;
+    animation-duration: 400ms;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+}

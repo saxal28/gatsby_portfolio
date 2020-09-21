@@ -1,0 +1,31 @@
+.contact-page {
+
+    .page__title {
+        max-width: 450px;
+    }
+    .contact-section {
+        &__contact-text {
+            display: flex;
+            align-items: center;
+            font-size: 32px;
+
+            margin-bottom: 30px;
+            font-family: $alt-font;
+        }
+
+        &__icon {
+            margin-right: 20px;
+        }
+
+        &__icon {
+            height: 60px;
+            width: 60px;
+            fill: white;
+
+            &.small {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}
