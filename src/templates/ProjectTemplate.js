@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { LANGUAGES, ProjectLayout } from "../components/projectLayout";
+import { ProjectLayout } from "../components/projectLayout"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,31 +9,30 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   const {
-      title,
-      subtitle,
-      website,
-      technologies,
-      image, 
-      color
+    title,
+    subtitle,
+    website,
+    technologies,
+    image,
+    color,
+    short_description,
   } = frontmatter || {}
 
   const props = {
     title,
-    subtitle: "Business Website",
+    subtitle,
     website,
     technologies,
     image,
-    color
+    color,
+    subtitle,
+    short_description,
   }
-
-  console.log({frontmatter})
 
   return (
     <div className={`page-${frontmatter.path}`}>
       <ProjectLayout {...props}>
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </ProjectLayout>
     </div>
   )
@@ -74,15 +73,16 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         path
         title
+        subtitle
         meta_title
         meta_description
         image
         technologies
         color
         website
+        short_description
       }
     }
   }

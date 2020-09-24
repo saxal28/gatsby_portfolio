@@ -1,16 +1,16 @@
 
+
+
 @mixin page-theme($image, $color) {
     .page {
         background-image: url($image);
 
         .tag {
-            box-shadow: 0 4px 8px $color !important;
-            background: $color !important; 
+            background: $color; 
         }
 
         .button {
-            box-shadow: 0 4px 8px $color !important;
-            background: $color !important; 
+            background: $color; 
         }
 
         &:before {

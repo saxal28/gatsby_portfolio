@@ -4,9 +4,10 @@ import React, { useState } from "react"
 import Swiper from "react-id-swiper"
 
 const projects = [
-    { title: "KC HALL", subtitle: "Business Website", imgUrl: "/images/wedding.jpg", url:"/projects/kchall" },
-    { title: "Recipax", subtitle: "Web Application", imgUrl: "/images/strawberry.jpg", url:"/projects/recipax" },
-    { title: "Your next project?", subtitle: "Freelance Work", imgUrl: "/images/sparkler.jpeg", url:"#" },
+    { title: "KC HALL", subtitle: "Business Website", imgUrl: "/wedding.jpg", url:"/projects/kchall" },
+    { title: "Recipax", subtitle: "Web Application", imgUrl: "/recipax.jpg", url:"/projects/recipax" },
+    { title: "Saxa Pokedex", subtitle: "Android Application", imgUrl: "/saxa_pokedex.png", url:"/projects/saxa-pokedex" },
+    { title: "Your next project?", subtitle: "Freelance Work", imgUrl: "/sparkler.jpeg", url:"#" },
 ]
 
 const ProjectCard = ({ title, subtitle, imgUrl }) => (

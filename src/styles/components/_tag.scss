@@ -1,12 +1,23 @@
 .tag {
-    padding: 5px 10px;
-    display: inline-block;
-    color: white;
-    // font-family: $alt-font; 
-    font-size: 10px;
-    margin-right: 5px;
-    margin-bottom: 8px;
-    border-radius: 5px;
-    font-weight: 600;
-    text-transform: uppercase;
+  padding: 5px 10px;
+  display: inline-block;
+  color: white;
+  font-size: 10px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  font-weight: 600;
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 90%;
+    position: absolute;
+    top: 5px;
+    background: rgb(47, 144, 233);
+    left: 6px;
+    right: 6px;
+    z-index: -2;
+    filter: blur(4px);
+  }
 }

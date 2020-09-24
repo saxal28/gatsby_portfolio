@@ -7,6 +7,11 @@
 
     min-height: 100vh;
 
+    &.hide-delay {
+        background: red !important;
+        transition-delay: 2s;
+    }
+
     &:before {
         content: "";
         position: fixed;
@@ -138,3 +143,5 @@
         }
     }
 }
+
+@include page-theme("/images/crab.jpeg", dodgerblue);

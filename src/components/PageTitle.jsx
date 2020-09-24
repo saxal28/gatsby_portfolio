@@ -11,7 +11,7 @@ export const PageTitle = ({
 }) => {
   return (
       
-    <div className="page">
+    <div className="page hide-delay">
       <Navbar />
 
       <div className="page__container">

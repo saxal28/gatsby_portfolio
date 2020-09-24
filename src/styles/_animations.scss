@@ -36,6 +36,7 @@
     animation-duration: 1000ms;
     animation-delay: $delay;
     animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 @mixin linebreak-slide-in($delay) {
