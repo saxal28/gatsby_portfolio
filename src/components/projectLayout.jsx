@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Tag } from "./Tag"
 
 import { Grid, GridItem } from "../components/Grid"
@@ -17,6 +17,8 @@ export const ProjectLayout = ({
 }) => {
   const getTags = tags =>
     tags.map(tag => <Tag key={tag} label={tag} color={color} />)
+
+    console.log({image})
 
   const StyledPage = styled.div`
     background-image: url(${image}) !important;

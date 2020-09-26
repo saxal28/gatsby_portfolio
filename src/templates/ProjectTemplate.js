@@ -25,7 +25,6 @@ export default function Template({
     technologies,
     image,
     color,
-    subtitle,
     short_description,
   }
 

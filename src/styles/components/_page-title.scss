@@ -1,5 +1,4 @@
 .page {
-    background: url("/images/hills.jpg");
     background-size: cover;
 
     display: flex;
@@ -8,7 +7,6 @@
     min-height: 100vh;
 
     &.hide-delay {
-        background: red !important;
         transition-delay: 2s;
     }
 
@@ -67,6 +65,13 @@
         @include fade-in-animation(2s);
     }
 
+
+    &:before {
+        background-position: center;
+        background-size: cover;
+        @include blur-animation(2s);
+    }
+
     &__content {
         background: white;
         border-radius: 5px;
@@ -80,6 +85,10 @@
         padding: 30px;
 
         display: flex;
+
+        &-image {
+            margin-top: -30px; margin-bottom: -30px; margin-left: -30px;
+        }
 
         .line-break {
             background: #333 !important;
@@ -143,5 +152,3 @@
         }
     }
 }
-
-@include page-theme("/images/crab.jpeg", dodgerblue);
