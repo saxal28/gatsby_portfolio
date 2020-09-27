@@ -7,6 +7,8 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sass`,
     // markdown to template
     {

@@ -12,7 +12,7 @@ export default function Home() {
       <div className="home__container">
 
         <Grid>
-          <GridItem lg={12} xl={5}>
+          <GridItem lg={12} xl={7}>
             <div className="home__text-column">
               <div className="line-break" />
               <div className="home__subtitle">
@@ -26,7 +26,7 @@ export default function Home() {
               </div>
             </div>
           </GridItem>
-          <GridItem lg={12} xl={7}>
+          <GridItem lg={12} xl={5}>
             <div className="home__project-column">
               <ProjectSlider />
             </div>
