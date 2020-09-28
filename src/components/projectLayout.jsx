@@ -18,8 +18,6 @@ export const ProjectLayout = ({
   const getTags = tags =>
     tags.map(tag => <Tag key={tag} label={tag} color={color} />)
 
-    console.log({image})
-
   const StyledPage = styled.div`
     background-image: url(${image}) !important;
     background-size: cover !important;
