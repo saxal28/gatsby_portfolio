@@ -9,12 +9,23 @@ color: "#2F90E9"
 meta-title: "Saxa Pokedex"
 meta-description: "Saxa Pokedex"
 
-website: "https://recipax.herokuapp.com/"
-technologies: ["Android", "Kotlin", "Retrofit", "Room", "MVVM", "Coroutines", "Javascript"]
+# website: "https://recipax.herokuapp.com/"
+technologies:
+  [
+    "Android",
+    "Kotlin",
+    "Retrofit",
+    "Room",
+    "Moshi",
+    "MVVM",
+    "PokeApi",
+    "Coroutines",
+    "Javascript",
+  ]
 
-short-description: "Recipax is a pinterest-inspired application that will let fitness folk find healthy meal-prep recipes. It will also allow them to eventually create meal plans and export shopping lists for the week."
+short-description: "A fun modern pokedex with offline support!"
 ---
 
-Recipax is a nutrition / meal prep app that I am currently developing /architecting. I'm writing the front end with React with Typescript, using the Controller higher-order-component design pattern for scalabilty / code cleanliness. For state management, I decided to roll with Redux & Redux-Thunk for handling asynchronous tasks.
+Why build this app? There are hundreds of Pokedex apps out there on the play store. I decided to use this app as my playground, using the latest and greatest tools and libraries from Google. I chose the popular MVVM architecture, centering around data-binding and asynchronous actions with coroutines.
 
-The backend is running on Node with the NestJS framework (also written in Typescript). The database of choice is MySQL, with TypeORM as my ORM.
+Futhermore, I made the decision to give the app offline support! To do this, I wrote a Node script to pull in Pokemon data from PokeAPI, generate JSON files and inject them into the resource directory, and then mocked Retrofit to return my generated JSON. This overall lead to a much better user-experience, since it's independent of the user's internet connection.
