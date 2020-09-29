@@ -76,15 +76,19 @@ export const ProjectLayout = ({
                   </div>
                   <div className="page__content-body">
                     {children}
-                    <br />
-                    <br />
-                    <StyledButtonLink
-                      href={website}
-                      className="button"
-                      target="_blank"
-                    >
-                      View Website
-                    </StyledButtonLink>
+
+                    {website && (
+                      <>
+                        <br />
+                        <StyledButtonLink
+                          href={website}
+                          className="button"
+                          target="_blank"
+                        >
+                          View Website
+                        </StyledButtonLink>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
