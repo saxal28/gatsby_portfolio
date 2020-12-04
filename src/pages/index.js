@@ -3,11 +3,14 @@ import React from "react"
 import { Grid, GridItem } from '../components/Grid'
 import { Navbar } from "../components/Navbar"
 import { ProjectSlider } from '../components/ProjectSlider'
+import { SEO } from "../components/Seo"
 
 export default function Home() {
   return (
     <div className="home">
       <Navbar />
+
+      <SEO/>
 
       <div className="home__container">
 

@@ -4,6 +4,9 @@ import { Tag } from "./Tag"
 import { Grid, GridItem } from "../components/Grid"
 import { Navbar } from "../components/Navbar"
 import styled from "styled-components"
+import BackButton from "../../svg/back-button.svg"
+import { SEO } from "./Seo"
+import { Link } from "gatsby"
 
 export const ProjectLayout = ({
   title,
@@ -43,8 +46,16 @@ export const ProjectLayout = ({
   `
 
   return (
-    <StyledPage className="page hide-delay">
+    <StyledPage className="page">
       <Navbar />
+
+      {/* Todo: add dynamic seo */}
+      <SEO title={title} description={short_description} />
+
+      {/* TODO: back button here */}
+      <Link to={"/"} className="page__back-button">
+        <BackButton />
+      </Link>
 
       <div className="page__container">
         <Grid>

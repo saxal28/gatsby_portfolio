@@ -20,7 +20,7 @@ technologies:
     "MVVM",
     "PokeApi",
     "Coroutines",
-    "Javascript",
+    "Javascript"
   ]
 
 short-description: "A fun modern pokedex with offline support!"

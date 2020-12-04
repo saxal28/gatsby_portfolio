@@ -30,6 +30,15 @@
     animation-fill-mode: forwards;
 }
 
+@mixin quick-fade-in-animation($delay) {
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 600ms;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
 @mixin fade-in-animation($delay) {
     opacity: 0;
     animation-name: fade-in;

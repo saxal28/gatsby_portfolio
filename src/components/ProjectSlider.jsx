@@ -1,5 +1,6 @@
 // import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { Link } from "gatsby";
 import React, { useState, useRef, useEffect } from "react"
 import Swiper from "react-id-swiper"
 import Next from "../../svg/next.svg";
@@ -123,7 +124,7 @@ export const ProjectSlider = props => {
     <div className="project-slider">
       <Swiper {...params}>
         {projects.map(({ title, subtitle, imgUrl, url }, index) => (
-          <a key={url} className="no-style" href={url}>
+          <Link key={url} className="no-style" href={url}>
             <div
               className={`project-card ${activeClass(index)}`}
               style={{ background: `url(${imgUrl})` }}
@@ -134,7 +135,7 @@ export const ProjectSlider = props => {
                 <div className="project-card__title">{title}</div>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </Swiper>
       <div className="project-slider__navigation">
