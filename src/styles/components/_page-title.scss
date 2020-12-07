@@ -63,8 +63,10 @@ $blur-size: -20px;
     line-height: 105px;
     margin-bottom: 10px;
     max-width: 350px;
+    margin-top: 0 !important;
 
     opacity: 0;
+    font-weight: normal;
 
     @include fade-in-animation(500ms);
   }

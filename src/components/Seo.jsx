@@ -19,15 +19,21 @@ function generateKeywords() {
     "software",
     "freelance",
     "software engineering",
+    "software engineer",
+    "software developer",
+    "seo",
     "programmer",
     "find work",
     "alan",
     "alan sax",
     "Alan Sax",
+    "Sax",
     "Alan ",
     "Android",
     "Kotlin",
     "Web Design",
+    "Web Development",
+    "freelancing",
     "Website",
     "Websites",
     "Programming",
@@ -74,10 +80,6 @@ function SEO({ description, lang = "en-US", meta, title = "" }) {
   )
   const { siteMetadata } = site
 
-  // const metaDescription = description || siteMetadata.description
-  // const siteUrl = siteMetadata.url || "https://saxal.me"
-  // const image = "https://i.imgur.com/78PClSw.jpg"
-
   const data = {
     title: title || siteMetadata.title,
     titleTemplate: siteMetadata.titleTemplate || "%s",
@@ -98,59 +100,6 @@ function SEO({ description, lang = "en-US", meta, title = "" }) {
 
       <meta property="keywords" content={generateKeywords()} />
     </Helmet>
-
-    // <Helmet
-    //   htmlAttributes={{ lang }}
-    //   title={title}
-    //   titleTemplate={`${site.siteMetadata.title} | %s `}
-    //   meta={[
-    //     {
-    //       name: `description`,
-    //       content: metaDescription,
-    //     },
-    //     {
-    //       property: `og:title`,
-    //       content: title,
-    //     },
-    //     {
-    //       property: `og:description`,
-    //       content: metaDescription,
-    //     },
-    //     {
-    //       property: `og:type`,
-    //       content: `website`,
-    //     },
-    //     {
-    //       property: `og:url`,
-    //       content: siteUrl,
-    //     },
-    //     {
-    //       property: `og:image`,
-    //       content: image,
-    //     },
-    //     {
-    //       name: `author`,
-    //       content: `Alan Sax, saxal28@gmail.com`,
-    //     },
-    //     {
-    //       name: `Classification`,
-    //       content: `Business`,
-    //     },
-    //     {
-    //       name: `url`,
-    //       content: siteUrl,
-    //     },
-    //     {
-    //       name: `identifier-URL`,
-    //       content: siteUrl,
-    //     },
-    //     {
-    //       name: `keywords`,
-    //       content: generateKeywords(),
-    //     },
-    //     {},
-    //   ].concat(meta)}
-    // ></Helmet>
   )
 }
 

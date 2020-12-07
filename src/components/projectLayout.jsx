@@ -60,10 +60,10 @@ export const ProjectLayout = ({
       <div className="page__container">
         <Grid>
           <GridItem lg={12} xl={5}>
-            <div className="page__text-column">
+            <div className="page__text-column"> 
               <div className="line-break" />
               <div className="page__subtitle">{subtitle}</div>
-              <div className="page__title">{title}</div>
+              <h1 className="page__title">{title}</h1>
               <div className="page__body">{short_description}</div>
             </div>
           </GridItem>

@@ -21,9 +21,9 @@ export default function Home() {
               <div className="home__subtitle">
                 Software Engineer | Designer | Entrepreneur
               </div>
-              <div className="home__title">
+              <h1 className="home__title">
                 Howdy...<br /> I'm Alan Sax
-              </div>
+              </h1>
               <div className="home__body">
                 Welcome to my portfolio! Come check out what I'm working on! I am <strong>available for freelance work</strong>; shoot me an email!
               </div>
