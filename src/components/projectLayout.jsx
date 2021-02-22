@@ -7,6 +7,7 @@ import styled from "styled-components"
 import BackButton from "../../svg/back-button.svg"
 import { SEO } from "./Seo"
 import { Link } from "gatsby"
+import ReactPlayer from "react-player"
 
 export const ProjectLayout = ({
   title,
@@ -70,6 +71,7 @@ export const ProjectLayout = ({
           <GridItem lg={12} xl={7}>
             <div className="page__project-column">
               <div className="page__content">
+          
                 <div
                   className="page__content-image"
                   style={{ background: `url(${image})` }}

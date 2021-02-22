@@ -20,6 +20,12 @@ const projects = [
     url: "/projects/recipax",
   },
   {
+    title: "Perfect Blend",
+    subtitle: "React Native / Ipad Application",
+    imgUrl: "/coffee_shop.png",
+    url: "/projects/perfect-blend",
+  },
+  {
     title: "Saxa Pokedex",
     subtitle: "Android Application",
     imgUrl: "/saxa_pokedex.png",
@@ -32,16 +38,6 @@ const projects = [
     url: "#",
   },
 ]
-
-const ProjectCard = ({ title, subtitle, imgUrl }) => (
-  <div className="project-card" style={{ background: `url(${imgUrl})` }}>
-    <div className="project-card__container">
-      <div className="line-break" />
-      <div className="project-card__subtitle">{subtitle}</div>
-      <div className="project-card__title">{title}</div>
-    </div>
-  </div>
-)
 
 export const ProjectSlider = props => {
   const [swiper, setSwiper] = useState(null)
